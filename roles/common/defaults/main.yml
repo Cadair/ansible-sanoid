@@ -55,3 +55,6 @@ syncoid_snapshot_keep_yearly: '0'
 
 # Default Value for Syncoid Master
 syncoid_master: 'false'
+
+# Use sudo for ZFS permissions
+syncoid_use_sudo: true

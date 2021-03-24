@@ -47,15 +47,15 @@
     syncoid_snapshot_keep_yearly: "{{ syncoid_snapshot_keep_yearly | default(default_value, true) }}"
     syncoid_master: "{{ syncoid_master | default(default_value, true) }}"
 
-- name: Fail if ZFS Datasets is Empty
-  fail:
-    msg: "ZFS Datasets is Empty"
-  when:
-    - "sanoid_zfs_datasets | length <= 0"
+#- name: Fail if ZFS Datasets is Empty
+#  fail:
+#    msg: "ZFS Datasets is Empty"
+#  when:
+#    - "sanoid_zfs_datasets | length <= 0"
 
-- name: Fail if ZFS Datasets not Found
-  fail:
-    msg: "ZFS Datasets not Found"
-  with_items: "{{ sanoid_zfs_datasets }}"
-  when:
-    - zfs_dataset_lists.stdout.find(item.dataset) == -1
+#- name: Fail if ZFS Datasets not Found
+#  fail:
+#    msg: "ZFS Datasets not Found"
+#  with_items: "{{ sanoid_zfs_datasets }}"
+#  when:
+#    - sanoid_zfs_datasets | length > 0 and zfs_dataset_lists.stdout.find(item.dataset) == -1

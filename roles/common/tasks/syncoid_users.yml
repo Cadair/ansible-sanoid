@@ -21,3 +21,4 @@
     insertafter: "^%sudo"
     validate: "visudo -cf %s"
     state: present
+  when: syncoid_use_sudo
